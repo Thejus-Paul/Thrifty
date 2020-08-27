@@ -1,10 +1,14 @@
 import { h } from 'preact';
 import style from './style';
 
+let state = {
+	balance: 0
+}
+
 const Home = () => (
 	<div class={style.home}>
-		<h1>Home</h1>
-		<p>This is the Home component.</p>
+		<h1>Thrifty</h1>
+		<span> Balance: {state.balance}</span><br/>
 	</div>
 );
 
