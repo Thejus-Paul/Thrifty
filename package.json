@@ -22,12 +22,12 @@
     "eslint-config-preact": "^1.1.0",
     "jest": "^24.9.0",
     "jest-preset-preact": "^1.0.0",
-    "preact-cli": "^3.0.0",
+    "preact-cli": "^3.0.3",
     "sirv-cli": "1.0.3"
   },
   "dependencies": {
-    "acorn": "^8.0.1",
-    "preact": "^10.3.2",
+    "acorn": "^8.0.4",
+    "preact": "^10.5.4",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1",
     "serialize-javascript": "^4.0.0"
