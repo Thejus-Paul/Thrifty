@@ -1,12 +1,27 @@
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(./Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Condensed";
+  src: url(./Roboto-Condensed.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Slab";
+  src: url(./Roboto-Slab.ttf) format("truetype");
+}
+
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	background: #2a2a2a;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
+	font-family: "Roboto-Light", sans-serif;
+	color: #333;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -18,3 +33,11 @@ html, body {
 #app {
 	height: 100%;
 }
+
+.MainBox {
+	color: red;
+}
+
+
+
+
