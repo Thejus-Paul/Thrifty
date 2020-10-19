@@ -20,6 +20,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	background: #2a2a2a;
+	font-size: 1rem;
 	font-family: "Roboto-Light", sans-serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
@@ -34,10 +35,9 @@ html, body {
 	height: 100%;
 }
 
-.MainBox {
-	color: red;
+@media screen and (max-width: 500px) {
+	html, body {
+		font-size: calc(.5vw + 1vh + 1vmin);
+	}
 }
-
-
-
 
