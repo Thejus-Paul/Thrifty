@@ -35,9 +35,13 @@ const AddMoney = () => {
 				</div>
 			</div>
 			<div class={style.secondaryWindow}>
-				<InputBox name="Description" />
-				<InputBox name="Amount" />
+				<div>
+					<InputBox name="Description" />
+					<InputBox name="Amount" />
+				</div>
+				<button class={style.button}> ADD </button>
 			</div>
+			
 		</div>
 	);
 	}
