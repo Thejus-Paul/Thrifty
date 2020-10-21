@@ -1,9 +1,9 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style';
-import Card from '../../components/Card/Card';
-import MiniStatements from '../../components/MiniStatements/MiniStatements';
-import Navigation from '../../components/Navigation/Navigation';
+import Card from '../../components/Card';
+import MiniStatements from '../../components/MiniStatements';
+import Navigation from '../../components/Navigation';
 
 
 const Home = () => (

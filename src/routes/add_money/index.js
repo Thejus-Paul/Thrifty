@@ -1,5 +1,6 @@
 import { h } from 'preact';
-import InputBox from '../../components/InputBox/InputBox';
+import InputBox from '../../components/InputBox';
+import Button from '../../components/Button';
 import style from './style';
 import { useState } from 'preact/hooks';
 
@@ -39,7 +40,7 @@ const AddMoney = () => {
 					<InputBox name="Description" />
 					<InputBox name="Amount" />
 				</div>
-				<button class={style.button}> ADD </button>
+				<Button name="ADD" />
 			</div>
 			
 		</div>

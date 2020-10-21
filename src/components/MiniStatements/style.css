@@ -19,3 +19,8 @@
 	height: 30px;
 	width: 30px;
 }
+
+.name {
+	font-family: "Roboto-Condensed";
+	font-weight: bold;
+}
