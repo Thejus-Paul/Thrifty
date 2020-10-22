@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import InputBox from '../../components/InputBox';
+import SelectBox from '../../components/SelectBox';
 import Button from '../../components/Button';
 import style from './style';
 import { useState } from 'preact/hooks';
@@ -20,8 +21,11 @@ const AddItem = () => {
 			<div class={style.MainWindow}>
 				<div>
 					<InputBox name="Name" />
-					<InputBox name="Category" />
-					<InputBox name="Size" />
+					<InputBox class={style.width} name="Category" />
+					<div class={style.container}>
+					<InputBox class={style.inputBox} name="Quantity" />
+					<SelectBox name="Size" />
+					</div>
 					<InputBox name="Total Amount" />
 				</div>
 				<Button name="ADD" />

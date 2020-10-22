@@ -37,4 +37,15 @@
 	padding: 20px;
 	background-color: #EEEEEE;
 }
+.width {
+	width: 75%;
+}
+
+.container {
+	width: 100%;
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: 2fr 1fr;
+}
+
 
