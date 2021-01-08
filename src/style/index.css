@@ -21,9 +21,15 @@ html, body {
 	margin: 0;
 	font-size: 1rem;
 	font-family: "Roboto-Light", sans-serif;
+	background-color: #dfdfdf;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	display: flex;
+	justify-content: center;
 }
 
 * {
@@ -31,12 +37,17 @@ html, body {
 }
 
 #app {
-	height: 100%;
+	width: 60vw;
+	height: 80vh;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 	html, body {
 		font-size: calc(.5vw + 1vh + 1vmin);
+	}
+	#app {
+		width: 100vw;
+		height: 100vh;
 	}
 }
 
