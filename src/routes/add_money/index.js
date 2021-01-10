@@ -31,8 +31,8 @@ const AddMoney = () => {
 			<div class={style.container}>
 				Add Money to
 				<div class={style.options}>
-					<img id="cash" onClick={byCashPayment} alt="Cash icon" src="https://img.icons8.com/color/96/cash-.png"/>
-					<img id="card" class={style.inactive} onClick={byCardPayment} alt="Credit Card icon" src="https://img.icons8.com/color/96/bank-card-back-side.png"/>			
+					<img id="cash" onClick={byCashPayment} alt="Cash icon" src="https://img.icons8.com/color/96/cash-.png" />
+					<img id="card" class={style.inactive} onClick={byCardPayment} alt="Credit Card icon" src="https://img.icons8.com/color/96/bank-card-back-side.png" />			
 				</div>
 			</div>
 			<div class={style.secondaryWindow}>

@@ -12,8 +12,8 @@ const addIcon = (card) => (card ?
 );
 
 const addAmount = (sign, amount) => ( sign ? 
-	<span class={style.amount}>{'+' + amount}</span> :
-	<span class={style.amount}>{'-' + amount}</span>
+	<span class={style.amount}>{'+'.concat(amount)}</span> :
+	<span class={style.amount}>{'-'.concat(amount)}</span>
 );
 
 const Statement = (props) => (
@@ -26,7 +26,7 @@ const Statement = (props) => (
 			</div>
 			{ addAmount(props.credit, props.amount) }
 		</div>
-		<hr/>
+		<hr />
 	</div>
 );
 

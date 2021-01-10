@@ -2,7 +2,6 @@ import { h } from 'preact';
 import SelectBox from '../../components/SelectBox';
 import Button from '../../components/Button';
 import style from './style';
-import { useState } from 'preact/hooks';
 
 const Summary = () => {
 	return(

@@ -30,7 +30,7 @@ const state = {
 	]
 }
 
-const SecondaryScreen = (props) => (
+const SecondaryScreen = () => (
 	<div class={style.container}>
 		<h2> Mini Statements </h2>
 		{ state.statements.map((item) => 
