@@ -1,0 +1,26 @@
+.container {
+	height: 42vh;
+	margin: 0 20px 0 20px;
+}
+.box {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "Roboto-Slab";
+}
+
+.list object {
+	height: 30px;
+	width: 30px;
+}
+
+.name {
+	font-family: "Roboto-Condensed";
+	font-weight: bold;
+}

@@ -1,0 +1,43 @@
+.home {
+	min-height: 100%;
+	width: 100%;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.container {
+	height: 50vh;
+	width: 100%;
+	background-color: #1565C0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #ccc;
+	font-size: 2rem;
+}
+
+.options {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;	
+}
+
+.secondaryWindow {
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #eee;
+}
+
+.selectBox {
+	width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+}

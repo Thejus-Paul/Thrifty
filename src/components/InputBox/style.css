@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-bottom: 1rem;
+}
+
+.name {
+	font-size: 1.3rem;
+	margin: 0 0 5px 5px;
+}
+.input {
+	width: 100%;
+	border: none;
+	border-radius: 7px;
+	padding: 1rem;
+	font-family: "Roboto-Slab";
+	font-size: 1.1rem;
+	color: #333;
+	box-shadow: -2px 4px 10px rgba(102,102,102,0.25);
+}
