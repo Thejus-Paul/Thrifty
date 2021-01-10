@@ -1,4 +1,5 @@
 import { h } from 'preact';
+
 import { useState } from 'preact/hooks';
 import { Link } from 'preact-router/match';
 import InputBox from '../../components/InputBox';
@@ -49,7 +50,6 @@ const AddMoney = () => {
 					<Button name="ADD" />
 				</Link>
 			</div>
-			
 		</div>
 	);
 	}
