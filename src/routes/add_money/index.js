@@ -32,11 +32,11 @@ const AddMoney = () => {
 			let data = {
 				byCard: isCard,
 				name: desc,
-				credit: false,
+				credit: true,
 				amount: money
 			}
 			Axios
-		  .post("http://localhost:3000/thrifty/balance", data)
+		  .post("https://sphinx-server.herokuapp.com/thrifty/balance", data)
 		  .then(res => console.log(res))
 		  .catch(err => console.log(err));
 		  window.location.href = '/';

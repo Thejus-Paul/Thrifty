@@ -1,46 +1,39 @@
 import style from './style.css';
 import Statement from './Statement';
+import { useState, useEffect } from 'preact/hooks';
+import Axios from 'axios';
 
-const state = {
-	statements : [
-		{
-			byCard: true,
-			name: "Internet Bill",
-			credit: false,
-			amount: 1063.00
-		},
-		{
-			byCard: false,
-			name: "Notebook",
-			credit: false,
-			amount: 86.52
-		},
-		{
-			byCard: true,
-			name: "Milkshake w/ Ice Cream",
-			credit: false,
-			amount: 150.00
-		},
-		{
-			byCard: false,
-			name: "Pocket Money",
-			credit: true,
-			amount: 1500.00
-		},
-	]
+const SecondaryScreen = () => {
+	let [miniStatements, setMiniStatements] = useState([{
+		byCard: true,
+		name: "Fetching...",
+		credit: false,
+		amount: 0
+	}]);
+	useEffect(()=> {
+	Axios({
+		method: "POST",
+		url: "https://sphinx-server.herokuapp.com/thrifty/miniStatements",
+		headers: {
+			"Content-Type": "application/json"
+		}
+		}).then(res => { 
+		setMiniStatements(res.data)
+	});
+	}, []);
+	
+	return(
+		<div class={style.container}>
+			<h2> Mini Statements </h2>
+			{ miniStatements.reverse().map((item) => 
+				<Statement 
+					byCard={item.byCard}
+					name={item.name} 
+					credit={item.credit}
+					amount={item.amount}
+				/>) }
+		</div>
+	);
 }
-
-const SecondaryScreen = () => (
-	<div class={style.container}>
-		<h2> Mini Statements </h2>
-		{ state.statements.map((item) => 
-			<Statement 
-				byCard={item.byCard}
-				name={item.name} 
-				credit={item.credit}
-				amount={item.amount}
-			/>) }
-	</div>
-);
 
 export default SecondaryScreen;
