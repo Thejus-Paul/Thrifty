@@ -32,7 +32,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src 'self' https://sphinx-server.herokuapp.com; script-src 'self' https://sphinx-server.herokuapp.com ; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+                    "value": "default-src 'self' https://sphinx-server.herokuapp.com data:; script-src 'self' https://sphinx-server.herokuapp.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
                 },
                 {
                     "key": "X-XSS-Protection",
