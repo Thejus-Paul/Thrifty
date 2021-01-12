@@ -28,11 +28,11 @@
                 },
                 {
                     "key": "X-Frame-Options",
-                    "value": "DENY"
+                    "value": "SAMEORIGIN"
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com; script-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com 'unsafe-inline'; style-src https://thrifty.vercel.app 'unsafe-inline'; img-src 'self'"
+                    "value": "default-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com; script-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com 'unsafe-inline'; style-src https://thrifty.vercel.app 'unsafe-inline'; img-src 'self' 'unsafe-inline'"
                 },
                 {
                     "key": "X-XSS-Protection",
