@@ -31,10 +31,6 @@
                     "value": "SAMEORIGIN"
                 },
                 {
-                    "key": "Content-Security-Policy",
-                    "value": "default-src 'self' https://sphinx-server.herokuapp.com data:; script-src 'self' https://sphinx-server.herokuapp.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https://img.icons8.com/; object-src 'self' data:"
-                },
-                {
                     "key": "X-XSS-Protection",
                     "value": "1; mode=block"
                 },
