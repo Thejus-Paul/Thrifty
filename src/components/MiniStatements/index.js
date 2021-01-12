@@ -18,14 +18,14 @@ const SecondaryScreen = () => {
 			"Content-Type": "application/json"
 		}
 		}).then(res => { 
-		setMiniStatements(res.data)
+		setMiniStatements(res.data.reverse())
 	});
 	}, []);
 	
 	return(
 		<div class={style.container}>
 			<h2> Mini Statements </h2>
-			{ miniStatements.reverse().map((item) => 
+			{ miniStatements.map((item) => 
 				<Statement 
 					byCard={item.byCard}
 					name={item.name} 
