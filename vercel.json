@@ -32,7 +32,7 @@
                 },
                 {
                     "key": "Content-Security-Policy",
-                    "value": "default-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com; script-src https://thrifty.vercel.app https://sphinx-server.herokuapp.com 'unsafe-inline'; style-src https://thrifty.vercel.app 'unsafe-inline'; img-src 'self' 'unsafe-inline'"
+                    "value": "default-src 'self' https://sphinx-server.herokuapp.com; script-src 'self' https://sphinx-server.herokuapp.com ; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
                 },
                 {
                     "key": "X-XSS-Protection",
