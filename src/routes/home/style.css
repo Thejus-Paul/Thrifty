@@ -1,13 +1,4 @@
-.home {
-	min-height: 100%;
-	width: 100%;
-	background-color: #eee;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-}
-
-.container {
+.balance_container {
 	height: 50vh;
 	width: 100%;
 	background-color: #1565C0;
@@ -15,6 +6,28 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.card {
+	width: 90%;
+	height: 15vh;
+	background-color: rgba(196, 196, 196, .6);
+	color: #ddd;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: .75rem;
+	border-radius: 7px;
+}
+
+.card .title {
+	font-size: 1.5rem;
+	margin-bottom: 7px;
+}
+.card .amount {
+	color: #fff;
+	padding-left: 10px;
+	font-size: 3rem;
 }
 
 .button {
@@ -31,4 +44,33 @@
 
 .button svg {
 	margin-right: 5px;
+}
+
+.statements_container {
+	height: 42vh;
+	margin: 0 20px 0 20px;
+	overflow-y: scroll;
+}
+
+.box {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "Roboto Slab", serif;
+}
+
+.list object {
+	height: 30px;
+	width: 30px;
+}
+
+.name {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
 }

@@ -1,9 +1,9 @@
-import style from './style.css';
-import { Link } from 'preact-router/match';
+import './style.css';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => (
-	<div class={style.container}>
-		<Link href="/">
+	<div className="nav_container">
+		<Link to="/">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M19 22H5C4.44772 22 4 21.5523 4 21V11.414C4 11.1488 4.10545 10.8945 4.293 10.707L11.293 3.70701C11.4806 3.51924 11.7351 3.41373 12.0005 3.41373C12.2659 3.41373 12.5204 3.51924 12.708 3.70701L19.708 10.707C19.8957 10.8943 20.0009 11.1488 20 11.414V21C20 21.5523 19.5523 22 19 22ZM10 15H14V20H18V11.828L12 5.82801L6 11.828V20H10V15Z" fill="#2E3A59" />
 		</svg>
@@ -14,7 +14,7 @@ const Navigation = () => (
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4H7V2H9V4H15V2H17V4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22ZM5 10V20H19V10H5ZM5 6V8H19V6H5ZM13 18H11V16H9V14H11V12H13V14H15V16H13V18Z" fill="#2E3A59" />
 		</svg>
-		<Link href="/add_item">
+		<Link to="/add_item">
 		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM4 12.172C4.04732 16.5732 7.64111 20.1095 12.0425 20.086C16.444 20.0622 19.9995 16.4875 19.9995 12.086C19.9995 7.68451 16.444 4.10977 12.0425 4.086C7.64111 4.06246 4.04732 7.59876 4 12V12.172ZM13 17H11V13H7V11H11V7H13V11H17V13H13V17Z" fill="#2E3A59" />
 		</svg>
