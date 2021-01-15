@@ -20,18 +20,10 @@ export default class App extends Component {
 			<div id="app">
 				<Router onChange={this.handleRoute}>
 					<Switch>
-						<Route path="/summary">
-							<Summary />
-						</Route>
-						<Route path="/add_item">
-							<AddItem />
-						</Route>
-						<Route path="/add_money">
-							<AddMoney />
-						</Route>
-						<Route path="/">
-							<Home />
-						</Route>
+						<Route path="/summary" component={Summary} />
+						<Route path="/add_item" component={AddItem} />
+						<Route path="/add_money" component={AddMoney} />
+						<Route path="/" component={Home} />
 					</Switch>
 				</Router>
 			</div>

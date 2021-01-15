@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import Axios from 'axios';
 import './style.css';
 
@@ -19,6 +19,7 @@ const InputBox = (props) => {
 };
 
 const AddMoney = () => {
+	let history = useHistory();
 	const [isCard, setCard] = useState(false);
 	const [desc, setDesc] = useState('');
 	const [money, setMoney] = useState(0);
@@ -47,13 +48,11 @@ const AddMoney = () => {
 				credit: true,
 				amount: money
 			}
-			Axios
+		Axios
 		  .post("https://sphinx-server.herokuapp.com/thrifty/balance", data)
-		  .then((res) => {console.log(res)})
-		  .catch((err) => {console.log(err)})
-		  .finally(() => { window.location.href = '/'; });
-		  
+		  .catch((err) => {console.log(err)});
 		}	  
+		setTimeout(()=> history.goBack(), 300);
 	}
 
 	return(

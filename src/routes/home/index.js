@@ -6,12 +6,19 @@ import Navigation from '../../components/Navigation';
 import cashIcon from './cash.svg';
 import cardIcon from './card.svg';
 
-const Card = (props) => (
-	<div className="card">
-		<span className="title">{props.name}</span>
-		<span className="amount">{props.amount}</span>
-	</div>
-);
+const Card = (props) => {
+	return (props.amount >= 0) ? (
+		<div className="card">
+			<span className="title">{props.name}</span>
+			<span className="amount">{props.amount}</span>
+		</div>
+	) : (
+		<div className="card debt">
+			<span className="title">{props.name}</span>
+			<span className="amount">{props.amount}</span>
+		</div>
+	)
+};
 
 const addIcon = (card) => (card ? 
 	<object type="image/svg+xml" data={cardIcon}>
@@ -42,22 +49,22 @@ const Statement = (props) => (
 );
 
 const MiniStatements = () => {
-	let [miniStatements, setMiniStatements] = useState([{
-		byCard: true,
-		name: "Fetching...",
-		credit: false,
-		amount: 0
-	}]);
-	useEffect(()=> {
-	Axios({
-		method: "POST",
-		url: "https://sphinx-server.herokuapp.com/thrifty/miniStatements",
-		headers: {
-			"Content-Type": "application/json"
-		}
-		}).then(res => { 
-		setMiniStatements(res.data.reverse())
-	});
+		let [miniStatements, setMiniStatements] = useState([{
+			byCard: true,
+			name: "Fetching...",
+			credit: false,
+			amount: 0
+		}]);
+		useEffect(()=> {
+		Axios({
+			method: "POST",
+			url: "https://sphinx-server.herokuapp.com/thrifty/miniStatements",
+			headers: {
+				"Content-Type": "application/json"
+			}
+			}).then(res => { 
+			setMiniStatements(res.data.reverse())
+		});
 	}, []);
 	
 	return(

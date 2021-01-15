@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Axios from 'axios';
 /* import SelectBox from '../../components/SelectBox'; */
 import './style.css';
@@ -19,6 +19,7 @@ const InputBox = (props) => {
 };
 
 const AddItem = () => {
+	let history = useHistory();
 	let [itemName, setItemName] = useState('');
 	let [group, setGroup] = useState('');
 	/* let [quantity, setQuantity] = useState(1); */
@@ -57,9 +58,10 @@ const AddItem = () => {
 
 			Axios
 		  .post("https://sphinx-server.herokuapp.com/thrifty/item", data)
-		  .then(res => console.log(res))
-		  .catch(err => console.log(err))
+		  .then((res) => {console.log(res) })
+		  .catch((err) => {console.log(err)})
 		  .finally(() => {window.location.href = '/'})
+		  setTimeout(()=> history.goBack(), 300);
 		}	   
 	}
 	return(
