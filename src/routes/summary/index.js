@@ -1,22 +1,24 @@
-import { h } from 'preact';
-import SelectBox from '../../components/SelectBox';
-import Button from '../../components/Button';
-import style from './style';
+import React from 'react';
+/* import SelectBox from '../../components/SelectBox'; */
+import './style.css';
+
+const Button = (props) => <button className="button" onClick={props.action}>{props.name}</button>
+
 
 const Summary = () => {
 	return(
-		<div class={style.home}>
-			<div class={style.container}>
+		<div className="home">
+			<div className="container">
 				Summary Report For
-                <div class={style.selectBox}><SelectBox /></div>
+                <div className="selectBox">{/* <SelectBox /> */}</div>
 			</div>
-			<div class={style.secondaryWindow}>
+			<div className="secondaryWindow">
 
 				<Button name="GENERATE REPORT" />
 			</div>
 			
 		</div>
 	);
-	}
+}
 
 export default Summary;
