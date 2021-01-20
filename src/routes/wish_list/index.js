@@ -1,24 +1,23 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
+import Axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import WishCard from '../../components/WishCard';
 import './style.css';
 
 const WishList = () => {
-	const arr = [
-		{
-			itemName: "Zenfone 7",
-			url: "https://www.mobiledokan.co/wp-content/uploads/2020/07/Asus-Zenfone-7.jpg",
-			price: 50000,
-			research: 20
-		},
-		{
-			itemName: "Pixel 4a",
-			url: "https://www.sprint.com/content/dam/sprint/us/en/device-assets/google/pixel-4a-5g/images/devicenb_650x900.png",
-			price: 32000,
-			research: 20
-		}
-	]
+	let [wishList, setWishList] = useState([{ itemName: "Fetching..."}]);
+	useEffect(()=> {
+		Axios({
+			method: "POST",
+			url: "https://sphinx-server.herokuapp.com/thrifty/wishList",
+			headers: {
+				"Content-Type": "application/json"
+			}
+			}).then(res => { 
+				setWishList(res.data)
+		});
+	}, [wishList]);
 
 	return(
 		<div className="home">
@@ -32,7 +31,7 @@ const WishList = () => {
 			</div>
 			<div className="wishList">
 				{
-					arr.map((wish,index) => <WishCard
+					wishList.map((wish,index) => <WishCard
 						key={index}
 						itemName={wish.itemName}
 						url={wish.url}
@@ -41,11 +40,13 @@ const WishList = () => {
 					)
 				}
 				<div className="btnContainer">
+					<Link to="/add_wish">
 					<span className="addButton">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M10.25 10.25V17.75H7.75V10.25H0.25V7.75H7.75V0.25H10.25V7.75H17.75V10.25H10.25Z" fill="#F2F2F2"/>
 						</svg>
 					</span>
+					</Link>
 				</div>
 			</div>
 			<Navigation />
